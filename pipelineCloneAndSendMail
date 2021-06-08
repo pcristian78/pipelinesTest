@@ -6,6 +6,6 @@ node {
         sh 'ls'
     }
     stage('Mail') {
-        mail bcc: '', body: 'some body message', cc: '', from: '', replyTo: '', subject: 'test pipeline', to: 'pcristian78@gmail.com'
+        mail bcc: '', body: 'some body message', cc: '', from: 'pipelineCloneAndSendMail', replyTo: '', subject: 'test pipeline', to: 'pcristian78@gmail.com'
     }
 }
