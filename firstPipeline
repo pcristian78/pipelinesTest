@@ -1,0 +1,8 @@
+node {
+    stage('Clone repo') {
+        git 'https://github.com/pcristian78/maven-simple.git'
+    }
+    stage('Print') {
+        sh 'cat README.md'
+    }
+}
