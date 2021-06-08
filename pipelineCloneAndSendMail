@@ -1,0 +1,11 @@
+node {
+    stage('Clone repo') {
+        git 'https://github.com/pcristian78/maven-simple.git'
+    }
+    stage('List') {
+        sh 'ls'
+    }
+    stage('Mail') {
+        mail bcc: '', body: 'some body message', cc: '', from: '', replyTo: '', subject: 'test pipeline', to: 'pcristian78@gmail.com'
+    }
+}
